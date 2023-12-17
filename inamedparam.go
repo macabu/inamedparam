@@ -36,6 +36,11 @@ func run(pass *analysis.Pass) (interface{}, error) {
 				continue
 			}
 
+			// TODO: add test case to reproduce this. Help wanted.
+			if len(method.Names) == 0 {
+				continue
+			}
+
 			methodName := method.Names[0].Name
 
 			for _, param := range interfaceFunc.Params.List {

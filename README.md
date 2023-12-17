@@ -2,6 +2,12 @@
 
 A linter that reports interfaces with unnamed method parameters.
 
+## Flags/Config
+```sh
+-skip-single-param
+    skip interfaces with a single unnamed parameter
+```
+
 ## Usage 
 
 ### Standalone

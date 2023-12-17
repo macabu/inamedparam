@@ -15,6 +15,8 @@ type NamedParam interface {
 
 	NoArgs() string
 
+	SingleParam(context.Context) error // want "interface method SingleParam must have named param for type context.Context"
+
 	WithName(ctx context.Context, number int, toggle bool, xtruct *xtruct, getter Another) (bool, error)
 
 	WithoutName(

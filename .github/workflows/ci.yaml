@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repo
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Set up Go
         uses: actions/setup-go@v4
@@ -32,3 +32,8 @@ jobs:
 
       - name: Run tests
         run: go test -count=1 -cover -covermode=atomic .
+
+      - name: Run linter
+        uses: golangci/golangci-lint-action@v3
+        with:
+          version: 'latest'

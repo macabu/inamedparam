@@ -54,7 +54,7 @@ func run(pass *analysis.Pass) (interface{}, error) {
 				continue
 			}
 
-			// TODO: add test case to reproduce this. Help wanted.
+			// Improvement: add test case to reproduce this. Help wanted.
 			if len(method.Names) == 0 {
 				continue
 			}

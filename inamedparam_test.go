@@ -19,7 +19,11 @@ func TestAnalyzerSkipSingleParam(t *testing.T) {
 	testdata := testutil.WithModules(t, analysistest.TestData(), nil)
 
 	analyzer := inamedparam.Analyzer
-	analyzer.Flags.Set("skip-single-param", "true")
+
+	err := analyzer.Flags.Set("skip-single-param", "true")
+	if err != nil {
+		t.Fatalf("failed to set skip-single-param flag: %v", err)
+	}
 
 	analysistest.Run(t, testdata, analyzer, "params")
 }

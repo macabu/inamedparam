@@ -28,7 +28,7 @@ var Analyzer = &analysis.Analyzer{
 func flags() flag.FlagSet {
 	flags := flag.NewFlagSet(analyzerName, flag.ExitOnError)
 
-	flags.Bool(flagSkipSingleParam, false, "skip interfaces with a single unnamed parameter")
+	flags.Bool(flagSkipSingleParam, false, "skip interface methods with a single unnamed parameter")
 
 	return *flags
 }

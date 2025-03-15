@@ -35,4 +35,10 @@ linters:
   disable-all: true
   enable:
     - inamedparam
+
+linters-settings:
+  inamedparam:
+    # Skips check for interface methods with only a single parameter.
+    # Default: false
+    skip-single-param: true
 ```

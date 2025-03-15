@@ -29,7 +29,7 @@ $ go vet -vettool=$(which inamedparam) ./...
 To enable it, you can add it to your `.golangci.yml` file, as such:
 ```yaml
 run:
-  deadline: 30s 
+  timeout: 30s 
 
 linters:
   disable-all: true
